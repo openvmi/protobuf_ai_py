@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from . import image_pb2 as image__pb2
+from protobuf_ai_py import image_pb2 as protobuf__ai__py_dot_image__pb2
 
 
 class ImageInferenceServiceStub(object):
@@ -16,8 +16,8 @@ class ImageInferenceServiceStub(object):
         """
         self.infer = channel.unary_unary(
                 '/ImageInferenceService/infer',
-                request_serializer=image__pb2.ImageInferRequest.SerializeToString,
-                response_deserializer=image__pb2.ImageInferResponse.FromString,
+                request_serializer=protobuf__ai__py_dot_image__pb2.ImageInferRequest.SerializeToString,
+                response_deserializer=protobuf__ai__py_dot_image__pb2.ImageInferResponse.FromString,
                 )
 
 
@@ -35,8 +35,8 @@ def add_ImageInferenceServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'infer': grpc.unary_unary_rpc_method_handler(
                     servicer.infer,
-                    request_deserializer=image__pb2.ImageInferRequest.FromString,
-                    response_serializer=image__pb2.ImageInferResponse.SerializeToString,
+                    request_deserializer=protobuf__ai__py_dot_image__pb2.ImageInferRequest.FromString,
+                    response_serializer=protobuf__ai__py_dot_image__pb2.ImageInferResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -60,7 +60,7 @@ class ImageInferenceService(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/ImageInferenceService/infer',
-            image__pb2.ImageInferRequest.SerializeToString,
-            image__pb2.ImageInferResponse.FromString,
+            protobuf__ai__py_dot_image__pb2.ImageInferRequest.SerializeToString,
+            protobuf__ai__py_dot_image__pb2.ImageInferResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
