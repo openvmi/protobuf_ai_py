@@ -17,7 +17,7 @@ class LprInferenceServiceStub(object):
         self.infer = channel.unary_unary(
                 '/LprInferenceService/infer',
                 request_serializer=protobuf__ai__py_dot_lpr__pb2.LprInferRequest.SerializeToString,
-                response_deserializer=protobuf__ai__py_dot_lpr__pb2.LprInferRequest.FromString,
+                response_deserializer=protobuf__ai__py_dot_lpr__pb2.LprInferResponse.FromString,
                 )
 
 
@@ -36,7 +36,7 @@ def add_LprInferenceServiceServicer_to_server(servicer, server):
             'infer': grpc.unary_unary_rpc_method_handler(
                     servicer.infer,
                     request_deserializer=protobuf__ai__py_dot_lpr__pb2.LprInferRequest.FromString,
-                    response_serializer=protobuf__ai__py_dot_lpr__pb2.LprInferRequest.SerializeToString,
+                    response_serializer=protobuf__ai__py_dot_lpr__pb2.LprInferResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -61,6 +61,6 @@ class LprInferenceService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/LprInferenceService/infer',
             protobuf__ai__py_dot_lpr__pb2.LprInferRequest.SerializeToString,
-            protobuf__ai__py_dot_lpr__pb2.LprInferRequest.FromString,
+            protobuf__ai__py_dot_lpr__pb2.LprInferResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

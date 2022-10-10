@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18protobuf_ai_py/lpr.proto\" \n\x0fLprInferRequest\x12\r\n\x05image\x18\x01 \x01(\t\"\x9b\x01\n\x10LprInferResponse\x12(\n\x07results\x18\x01 \x03(\x0b\x32\x17.LprInferResponse.Entry\x1a]\n\x05\x45ntry\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04\x63onf\x18\x03 \x01(\x02\x12\t\n\x01x\x18\x04 \x01(\x02\x12\t\n\x01y\x18\x05 \x01(\x02\x12\t\n\x01w\x18\x06 \x01(\x02\x12\t\n\x01h\x18\x07 \x01(\x02\x32\x44\n\x13LprInferenceService\x12-\n\x05infer\x12\x10.LprInferRequest\x1a\x10.LprInferRequest\"\x00\x42\x0cZ\n./image/pbb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18protobuf_ai_py/lpr.proto\" \n\x0fLprInferRequest\x12\r\n\x05image\x18\x01 \x01(\t\"\x9b\x01\n\x10LprInferResponse\x12(\n\x07results\x18\x01 \x03(\x0b\x32\x17.LprInferResponse.Entry\x1a]\n\x05\x45ntry\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04\x63onf\x18\x03 \x01(\x02\x12\t\n\x01x\x18\x04 \x01(\x02\x12\t\n\x01y\x18\x05 \x01(\x02\x12\t\n\x01w\x18\x06 \x01(\x02\x12\t\n\x01h\x18\x07 \x01(\x02\x32\x45\n\x13LprInferenceService\x12.\n\x05infer\x12\x10.LprInferRequest\x1a\x11.LprInferResponse\"\x00\x42\x0cZ\n./image/pbb\x06proto3')
 
 
 
@@ -55,5 +55,5 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _LPRINFERRESPONSE_ENTRY._serialized_start=125
   _LPRINFERRESPONSE_ENTRY._serialized_end=218
   _LPRINFERENCESERVICE._serialized_start=220
-  _LPRINFERENCESERVICE._serialized_end=288
+  _LPRINFERENCESERVICE._serialized_end=289
 # @@protoc_insertion_point(module_scope)
